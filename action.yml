@@ -1,0 +1,42 @@
+name: FoxPlug update writer
+description: Writes this week's product update from your public repo's releases and commits, as a draft release note or a comment on an issue you name.
+author: FoxPlug
+branding:
+  icon: edit-3
+  color: orange
+
+inputs:
+  mode:
+    description: Where the update goes. "release" creates a DRAFT release (never published by this action). "issue" adds a comment to the issue you name in issue-number.
+    required: false
+    default: release
+  issue-number:
+    description: The issue to comment on when mode is "issue". Required in that mode. The action never comments anywhere else.
+    required: false
+    default: ""
+  release-tag:
+    description: Tag name for the draft release (mode "release"). A draft does not create the tag until you publish it. Default is foxplug-update-YYYY-MM-DD.
+    required: false
+    default: ""
+  github-token:
+    description: Token used to read the repo's visibility and write the draft release or the comment. The default workflow token is enough.
+    required: false
+    default: ${{ github.token }}
+  foxplug-api-key:
+    description: Optional FoxPlug account key (pass it from a secret named FOXPLUG_API_KEY). Not needed for the free path.
+    required: false
+    default: ""
+
+outputs:
+  title:
+    description: The update's title.
+  body:
+    description: The update's text.
+  url:
+    description: Link to the draft release or the issue comment that was written.
+  written:
+    description: '"true" when an update was written, "false" when there was nothing to write.'
+
+runs:
+  using: node24
+  main: index.js
