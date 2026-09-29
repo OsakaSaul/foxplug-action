@@ -64,10 +64,31 @@ This uses the same free path as the "Paste your GitHub repo" box on foxplug.com,
 
 ## Example output
 
-This is the draft release body the action wrote for this repository on its own self-test run:
+This is the draft release body the action wrote for this repository on its own first run (2026-09-29), unedited. It is why every result lands as a draft: read it and fix anything before you publish.
 
 ```markdown
-EXAMPLE_OUTPUT_PLACEHOLDER
+## Manual workflows and full documentation for FoxPlug
+
+We added a manual run workflow so you can test the action on your own repository whenever you need. We documented the workflow example, permissions, limits and outputs so you know exactly how to set things up. We also switched to MIT licensing and made it clearer how FoxPlug writes your weekly update from public releases and commits into a draft release or a named issue, with the option to choose your listing icon and color.
+
+<details><summary>Draft posts</summary>
+
+**Post for X**
+
+FoxPlug now respects private repos and lets you pick how your weekly update shows up—draft release or issue comment, your icon, your color. 🎯
+
+**Post for LinkedIn**
+
+We shipped documentation for FoxPlug that covers everything you need to know: the workflow example, permissions, limits and outputs. You can now run the action manually on your repository to test it out before putting it on a schedule. We also moved to MIT licensing to make it clear you can use and modify this freely. FoxPlug turns your public releases and commits into a weekly product update, posted as a draft release or an issue comment with your chosen icon and color.
+
+**Short post**
+
+FoxPlug got docs, manual workflows, and MIT licensing. Now you can test it on your repo anytime before automating your weekly updates. 🦊
+
+</details>
+
+---
+Written by [FoxPlug](https://foxplug.com/?utm_source=gh_action) from this repository's public releases and commits. Review and edit it before you share it.
 ```
 
 ## License
