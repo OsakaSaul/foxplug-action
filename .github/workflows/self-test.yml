@@ -1,0 +1,29 @@
+name: Self-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: release (draft release) or issue (comment on an issue)
+        default: release
+      issue-number:
+        description: Issue to comment on (mode issue only)
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: foxplug
+        uses: ./
+        with:
+          mode: ${{ inputs.mode }}
+          issue-number: ${{ inputs.issue-number }}
+      - run: |
+          echo "written: ${{ steps.foxplug.outputs.written }}"
+          echo "url: ${{ steps.foxplug.outputs.url }}"
