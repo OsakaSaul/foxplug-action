@@ -1,11 +1,15 @@
 # FoxPlug update writer
 
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-FoxPlug%20update%20writer-blue?logo=github)](https://github.com/marketplace/actions/foxplug-update-writer "FoxPlug update writer on the GitHub Marketplace")
+
 A GitHub Action that writes your project's latest update from what you actually shipped. It reads your public repository's recent releases (last 90 days) and commits (last 30 days), asks [FoxPlug](https://foxplug.com/?utm_source=gh_action) to turn them into a short product update plus three draft posts, and puts the result in one place you choose:
 
 - **a draft release note** in your repo (it is never published by the action; you review it and press Publish yourself), or
 - **a comment on an issue you name** (for example a pinned "Weekly updates" issue).
 
 It posts nowhere else. No FoxPlug account and no secrets are needed.
+
+Want it without a workflow file, for private repos too, with a changelog page and posts ready to share? Use the hosted version at [foxplug.com](https://foxplug.com/?utm_source=gh_action "FoxPlug, the hosted version of this action").
 
 ## Use it
 
