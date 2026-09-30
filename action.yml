@@ -1,5 +1,5 @@
 name: FoxPlug update writer
-description: Writes this week's product update from your public repo's releases and commits, as a draft release note or a comment on an issue you name.
+description: Turns this week's releases and commits into a product update, saved as a draft GitHub release for you to review.
 author: FoxPlug
 branding:
   icon: edit-3
