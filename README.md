@@ -9,6 +9,8 @@ A GitHub Action that writes your project's latest update from what you actually 
 
 It posts nowhere else. No FoxPlug account and no secrets are needed.
 
+Which one to use: this action writes a weekly update into your repository with no account; [FoxPlug Changelog and Launch Posts](https://github.com/OsakaSaul/foxplug-changelog-action "The other FoxPlug action: each release or push goes into your FoxPlug project") sends each release or push into a FoxPlug project, where you approve the changelog entry and posts.
+
 Want it without a workflow file, for private repos too, with a changelog page and posts ready to share? Use the hosted version at [foxplug.com](https://foxplug.com/?utm_source=gh_action "FoxPlug, the hosted version of this action").
 
 ## Use it
